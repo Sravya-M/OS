@@ -1,19 +1,19 @@
 # OS
 ## Thread Creation
 
-1. by extending Thread class
+### 1. by extending Thread class
 
-// "static void main" must be defined in a public class.
-class MyThread extends Thread{
-    public void run(){
-        for(int i=0;i<5;i++)
-            System.out.println("MyThread");
-    }
-}
-public class CreateThread {
-    public static void main(String[] args) {
-        MyThread t=new MyThread();
-        
+        // "static void main" must be defined in a public class.
+        class MyThread extends Thread{
+            public void run(){
+                for(int i=0;i<5;i++)
+                    System.out.println("MyThread");
+            }
+        }
+        public class CreateThread {
+            public static void main(String[] args) {
+                MyThread t=new MyThread();
+
         // by calling this, user defined thread is registered into thread scheduler, starts executing thread t
         t.start();
         
@@ -28,18 +28,18 @@ public class CreateThread {
         // Thread.currentThread() will give current thread, getName() fetches the name
         System.out.println("main thread name is "+Thread.currentThread().getName());    // main thread name is main
 
-    }
-}
+         }
+        }
 
-Output:
+### Output:
 
-MyThread
-MyThread
-MyThread
-MyThread
-MyThread
-MyThread name is Thread[Thread-0,5,]
-MyThread name is Thread[sravya,5,]
-main thread
-main thread name is main
+    MyThread
+    MyThread
+    MyThread
+    MyThread
+    MyThread
+    MyThread name is Thread[Thread-0,5,]
+    MyThread name is Thread[sravya,5,]
+    main thread
+    main thread name is main
 
